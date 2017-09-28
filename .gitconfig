@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Bill Hedworth
+#	email = bill.hedworth@gmail.com 
+[user]
+	email = bill.hedworth@gmail.com
+	name = Bill Hedworth
