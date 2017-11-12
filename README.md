@@ -8,9 +8,9 @@
     config commit -m "Add vimrc"
     config push
     
-    git clone --separate-git-dir=$HOME/.myconf git@github.com:Bigsy/dotfiles.git $HOME/myconf-tmp
-    cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
-    rm -r ~/myconf-tmp/
+    git clone --separate-git-dir=$HOME/.myconf git@github.com:Bigsy/dotfiles.git .myconf-tmp
+    rsync --recursive --verbose --exclude '.git' myconf-tmp/ $HOME/
+    rm --recursive myconf-tmp
     alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
     
     
